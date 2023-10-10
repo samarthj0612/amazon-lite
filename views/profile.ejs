@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Samarth Jain" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./stylesheets/profile.css" />
+  </head>
+
+  <body>
+    <div id="sj-main">
+      <div id="left">
+        <a id="row" class="d-block text-decoration-none text-dark" >Your Account</a >
+        <a id="row" class="d-block text-decoration-none text-dark" >Your Orders</a >
+        <a id="row" class="d-block text-decoration-none text-dark" >Your Wishlist</a >
+        <a id="row" class="d-block text-decoration-none text-dark" >Your Recommendations</a >
+        <a id="row" class="d-block text-decoration-none text-dark" >Your Prime membership</a >
+        <a id="row" class="d-block text-decoration-none text-dark" >Amazon Business account</a >
+        <a href="/sellingaccount" id="row" class="d-block text-decoration-none text-dark" >Your Seller account</a >
+        <br /> <hr /> <br />
+        <a href="/login" id="row" class="d-block text-decoration-none text-dark" >Switch Account</a >
+        <a href="/logout" id="row" class="d-block text-decoration-none text-dark" >Logout</a >
+      </div>
+
+      <div id="right">
+        <a href="/home" class="btn btn-secondary px-5 position-absolute top-0 end-0 m-3" >Back</a >
+        <table>
+          <tr>
+            <td></td>
+            <td colspan="3" class="d-flex justify-content-center align-items-center w-100" >
+              <img src="./images/profilepics/<%= user.profilepic %>" class="mb-5" alt="" />
+            </td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td>Name</td>
+            <td class="text-center">:</td>
+            <td><%= user.username %></td>
+          </tr>
+
+          <tr>
+            <td>Email</td>
+            <td class="text-center">:</td>
+            <td><%= user.email %></td>
+          </tr>
+
+          <tr>
+            <td>Mobile</td>
+            <td class="text-center">:</td>
+            <td><%= user.mobile %></td>
+          </tr>
+
+          <tr>
+            <td>Address</td>
+            <td class="text-center">:</td>
+            <td><%= user.address %></td>
+          </tr>
+
+          <tr>
+            <td>Password</td>
+            <td class="text-center">:</td>
+            <td>
+              <a href="/changepassword" class="text-decoration-none" >Change Password</a >
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js" integrity="sha512-GQ5/eIhs41UXpG6fGo4xQBpwSEj9RrBvMuKyE2h/2vw3a9x85T1Bt0JglOUVJJLeyIUl/S/kCdDXlE/n7zCjIg==" crossorigin="anonymous" referrerpolicy="no-referrer" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous" ></script>
+  </body>
+</html>

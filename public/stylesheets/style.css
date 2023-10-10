@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+#sj-main {
+  position: relative;
+  width: 100%;
+}
+nav {
+  z-index: 9999;
+}
+#searchForm {
+  width: 55vw !important;
+}
+#carouselExampleInterval {
+  height: 80vh;
+  padding: 20px;
+}
+#carouselExampleInterval > div {
+  box-shadow: 0px 0px 15px 5px black;
+}
+#offers {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#offers div {
+  margin: 20px;
+  height: 40vh;
+  width: 30%;
+  border-radius: 20px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.559);
+  position: relative;
+  overflow: hidden;
+}
+#offers div img {
+  width: 100%;
+  border-radius: 20px;
+  position: absolute;
+  bottom: 0%;
+}
+
+#categories {
+  position: relative;
+  overflow-x: auto;
+  justify-content: center;
+  width: 100%;
+}
+#categories::-webkit-scrollbar {
+  width: 5px;
+}
+#categories::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.267);
+  border-radius: 30px;
+}
+#categories div {
+  padding: 50px 10px;
+  width: 2500px;
+}
+#categories div span {
+  position: relative;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  border: 1px solid black;
+  margin: 20px;
+  display: inline-block;
+}
+#categories div span img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+#categories div span h5 {
+  position: absolute;
+  bottom: -30%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 100%;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  #loginbtn {
+    margin-top: 10px;
+  }
+  #account {
+    display: none;
+  }
+  #searchForm {
+    width: 100% !important;
+  }
+  #offers div {
+    height: 150px;
+    width: 150px;
+    margin: 10px;
+  }
+  #carouselExampleInterval {
+    height: 32vh;
+  }
+  #categories div {
+    width: 1960px;
+  }
+  #categories div span {
+    height: 150px;
+    width: 150px;
+    margin: 20px;
+  }
+  #categories::-webkit-scrollbar {
+    display: none;
+  }
+}

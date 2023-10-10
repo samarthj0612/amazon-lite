@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Samarth Jain" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./stylesheets/cart.css" />
+  </head>
+
+  <body>
+    <div id="sj-main">
+      <nav class="bg-dark text-light">
+        <a href="/home"><i class="ri-arrow-go-back-line"></i></a>
+        <h1>Your Cart</h1>
+      </nav>
+
+      <div id="overlay">
+        <i id="backbtn" class="ri-arrow-go-back-line btn btn-outline-light px-4 mx-2 my-4" ></i>
+        <div id="receipt">
+          <div id="products">
+            <% products.forEach(function(product){ %>
+              <p id="row" class="d-flex justify-content-between align-items-center p-3 w-100" >
+                <span><%= product.productname %></span>
+                <span><%= product.productprice %></span>
+              </p>
+              <hr />
+            <% }) %>
+          </div>
+
+          <p id="row" class="d-flex justify-content-between align-items-center p-3 w-100" >
+            <span>Total amount</span>
+            <span><%= total %></span>
+          </p> <hr />
+
+          <a href="/payment" class="btn btn-success start-50 px-5 m-2 w-100" >Payment</a >
+        </div>
+      </div>
+
+      <div id="sellingproducts" class="container">
+        <button id="addproductbtn" class="btn btn-outline-dark px-5 d-flex justify-content-center align-items-center" >
+          Order now
+        </button>
+        <% products.forEach(function(product){ %>
+          <div id="card" class="card" style="width: 18rem">
+            <img src="./images/productpics/<%= product.productpic %>" class="card-img-top" alt="..." style="height: 287px; width: 287px; object-fit: cover" />
+            <div class="card-body">
+              <h5 class="card-title"><%= product.productname %></h5>
+              <p class="card-text"><%= product.productdetails %></p>
+              <a href="#" class="btn btn-primary"><%= product.productprice %></a>
+            </div>
+          </div>
+        <% }) %>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous" ></script>
+    <script src="./javascripts/sellingaccount.js"></script>
+  </body>
+</html>
